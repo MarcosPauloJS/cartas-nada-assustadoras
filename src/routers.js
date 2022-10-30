@@ -1,6 +1,7 @@
 import React from 'react'
 import { createBrowserRouter } from "react-router-dom";
-import { Home } from './pages/Home';
+import { CardView } from './pages/cardView';
+import { Home } from './pages/home';
 
 export const routers = createBrowserRouter([
   {
@@ -9,6 +10,6 @@ export const routers = createBrowserRouter([
   },
   {
     path: "/cards",
-    element: <h1>page cards</h1>,
+    element: <CardView/>,
   },
 ]);

@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 
 export const Frame = styled.div`
-margin: 50px;
-
+  width: 100%;
   max-width: 219px;
   height: 320px;
   padding: 0 10px 10px 10px;

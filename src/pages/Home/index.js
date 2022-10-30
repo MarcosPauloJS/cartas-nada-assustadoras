@@ -1,6 +1,7 @@
 import React from 'react';
+import { Button } from '../../components/Button/styled';
 import { Star } from '../../components/star/styled';
-import { Brand, Button, Description, HighLight, Input, Title, Wrapper } from './styled';
+import { Brand, Description, HighLight, Input, Title, Wrapper } from './styled';
 
 export const Home = props => {
   return (
