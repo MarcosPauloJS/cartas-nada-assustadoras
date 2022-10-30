@@ -14,4 +14,11 @@ export const Button = styled.button`
     transform: scale(1.1);
     transition: 0.7s;
   }
+
+  :disabled {
+    background: #242323;
+    color: rgba(255, 255, 255, 0.7);
+    transform: scale(1);
+    opacity: 1; 
+  }
 `

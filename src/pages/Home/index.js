@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '../../components/Button/styled';
 import { Star } from '../../components/star/styled';
 import { Brand, Description, HighLight, Input, Title, Wrapper } from './styled';
 
-export const Home = props => {
+export const Home = () => {
+  const [ userName, setUserName ] = useState('')
+  const navigate = useNavigate();
+
+  const handleEnter = () => {
+    localStorage.setItem('displayName', userName)
+    navigate('cards')
+  }
+
+  const handleChangeName = (e) => {
+    setUserName(e.target.value)
+  }
+  
   return (
     <Wrapper>
       <Brand>
@@ -13,8 +26,8 @@ export const Home = props => {
       </Brand>
 
       <Description>Diga-me o seu nome e entre no caminho sem volta de cartas que irão fazer qualquer coisa menos te assustar</Description>
-      <Input type="text" placeholder='Diga o seu nome'/>
-      <Button>VER CARTAS</Button>
+      <Input type="text" placeholder='Seu nome vai aqui' onChange={handleChangeName}/>
+      <Button onClick={handleEnter} disabled={userName.length < 1}>VER CARTAS</Button>
     </Wrapper>
   )
 }
