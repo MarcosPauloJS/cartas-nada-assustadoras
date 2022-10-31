@@ -31,7 +31,7 @@ export const Image = styled.img`
   height: 130px;
   border: 1px solid #000000;
   margin-bottom: 10px;
-  object-fit: cover;
+  object-fit: fill;
   margin-top: 5px;
 `
 

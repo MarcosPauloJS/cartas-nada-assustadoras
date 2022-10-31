@@ -1,7 +1,12 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import imageBG from "../../assets/img/ghosts.png"
 
-export const Wrapper = styled.h1`
+const ghost = keyframes`
+  0% { background-position: 94% -2% }
+  100% { background-position: 94% 0% }
+`
+
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +16,10 @@ export const Wrapper = styled.h1`
   background-image: url(${imageBG});
   background-repeat: no-repeat;
   background-position-x: 95%;
+  animation-name: ${ghost};
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 
   @media screen and (max-width: 940px) {
     background: none;
