@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Frame = styled.div`
   width: 100%;
   max-width: 219px;
-  height: 320px;
+  height: 335px;
   padding: 0 10px 10px 10px;
   border: 1px solid #000000;
   background-color: ${({theme}) => theme.colors.backgroundDark};
@@ -16,8 +16,10 @@ export const Frame = styled.div`
 `
 
 export const Description = styled.div`
-  height: 50%;
+  height: 39%;
   width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   background-color: ${({theme}) => theme.colors.backgroundLight};
   padding: 10px;
   border: 1px solid #000000;
@@ -26,9 +28,11 @@ export const Description = styled.div`
 
 export const Image = styled.img`
   width: 100%;
-  height: 140px;
+  height: 130px;
   border: 1px solid #000000;
   margin-bottom: 10px;
+  object-fit: cover;
+  margin-top: 5px;
 `
 
 export const Pointers = styled.div`
@@ -53,8 +57,11 @@ export const DisplayName = styled.div`
   color:  ${({theme}) => theme.colors.secondary};
   display: flex;
   margin: 5px;
+  width: 70%;
+  margin: 0 auto;
 
   >h1 {
+    text-align: center;
     font-size: ${({theme}) => theme.fontSize.big};
     text-shadow: -1px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1px 1.5px 0 #000, 1px 1.5px 0 #000;
   }
