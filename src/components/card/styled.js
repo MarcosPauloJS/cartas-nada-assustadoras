@@ -56,6 +56,7 @@ export const Pointers = styled.div`
 export const DisplayName = styled.div`
   color:  ${({theme}) => theme.colors.secondary};
   display: flex;
+  justify-content: center;
   margin: 5px;
   width: 70%;
   margin: 0 auto;
